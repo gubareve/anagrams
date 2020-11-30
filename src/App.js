@@ -10,7 +10,7 @@ class AnagramFinder extends React.Component {
   constructor(props) {
     super(props);
     this.handleChange = this.handleChange.bind(this);
-    this.state = { value: 'One' };
+    this.state = { value: '' };
   }
 
   handleChange(e) {
@@ -24,21 +24,9 @@ class AnagramFinder extends React.Component {
       <div className="App">
         <header className="App-header">
           <SubtitlesIcon className="Subtitles"/>
-          {/* <img src={logo} className="App-logo" alt="logo" /> */}
           <div className="TextField">
-          <TextField id="outlined-basic" label="Enter text here." variant="outlined" onChange={this.handleChange} defaultValue={this.state.value} />
+          <TextField id="outlined-basic" label="Enter a word here." variant="outlined" onChange={this.handleChange} defaultValue={this.state.value} />
           </div>
-          {/* <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a> */}
           <div className="Output">
         <Output className="Output" Input={findAnagrams(this.state.value)} />
         </div>
@@ -50,21 +38,9 @@ class AnagramFinder extends React.Component {
       <div className="App">
         <header className="App-header">
           <SubtitlesIcon className="Subtitles"/>
-          {/* <img src={logo} className="App-logo" alt="logo" /> */}
           <div className="TextField">
-          <TextField error helperText="Please enter a word!" id="outlined-basic" label="Enter text here." variant="outlined" onChange={this.handleChange} defaultValue={this.state.value} />
+          <TextField error helperText="Please enter a word!" id="outlined-basic" label="Enter a word here." variant="outlined" onChange={this.handleChange} defaultValue={this.state.value} />
           </div>
-          {/* <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a> */}
           <div className="Output">
           <ErrorAlert message="Please enter a word!"/>
         </div>
@@ -76,21 +52,9 @@ class AnagramFinder extends React.Component {
       <div className="App">
         <header className="App-header">
           <SubtitlesIcon className="Subtitles"/>
-          {/* <img src={logo} className="App-logo" alt="logo" /> */}
           <div className="TextField">
           <TextField error helperText="Too many letters!" id="outlined-basic" label="Enter text here." variant="outlined" onChange={this.handleChange} defaultValue={this.state.value} />
           </div>
-          {/* <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a> */}
           <div className="Output">
           <ErrorAlert message="Too many letters!" />
         </div>

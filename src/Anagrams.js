@@ -15,6 +15,6 @@ export default function findAnagrams(Input) {
   .map(perm => perm.join(''))
   .filter((el, idx, self) => (self.indexOf(el) === idx))  
   return (
-    permutations.filter(value=>words.includes(value))
+    permutations.filter(value=>words.includes(value) && value!==Input)
   );
 };
